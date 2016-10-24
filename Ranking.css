@@ -1,0 +1,53 @@
+*{
+	padding: 0;
+	margin: 0;
+	font-size: 18px;
+}
+table{
+	margin: 30px auto;
+}
+tr:nth-child(2n),th{
+	background-color: #E9E9E9;
+}
+tr:nth-child(odd){
+	background-color: #F3F3F3;
+}
+th[class^="point"]{
+	padding: .5em 1.2em .5em 1.2em;
+	cursor: pointer;
+	color: #b61962;
+	position: relative;
+}
+th[class^="point"]::after{
+	transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+	background-color: #18c28e;
+	position: absolute;
+	overflow: hidden;
+	display: block;
+	width: 0px;
+	height: 2px;
+	content: "";
+}
+th[class^="point"]:hover::after{
+	width: 73px;
+}
+td{
+	padding: .3em;	
+}
+.No{
+	width: 4em;
+}
+.username{
+	width: 20em;
+}
+a{
+	text-decoration: none;
+  color: #119;
+}
+img{
+	width: 2.33em;
+	margin-right: 5px;
+	border: 1px solid #7DAAC6;
+	border-radius: 5px;
+	vertical-align: middle;
+}
