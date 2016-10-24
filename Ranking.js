@@ -1,11 +1,10 @@
 var Data = React.createClass({
 	render : function(){
-		console.log(Object.prototype.toString.call(this.props.date));
 		var userdate = this.props.date.map(function(val,index){
 			return (
 				<tr>
 					<td>{index + 1}</td>
-					<td className="user"><a href={"http://www.freecodecamp.com/"+val.username}><img src={val.img}/>{val.username}</a></td>
+					<td className="user"><a href={"https://www.freecodecamp.com/"+val.username}><img src={val.img}/>{val.username}</a></td>
 					<td>{val.recent}</td>
 					<td>{val.alltime}</td>
 				</tr>
@@ -22,7 +21,7 @@ var Table = React.createClass({
 	},
 	ajax: function(urlval){
 		var recent = new XMLHttpRequest();
-		var url = "http://fcctop100.herokuapp.com/api/fccusers/top/"+urlval;
+		var url = "https://fcctop100.herokuapp.com/api/fccusers/top/"+urlval;
 		recent.open("GET",url);
 		recent.responseType="json";
 		recent.send(null);
